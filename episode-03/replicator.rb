@@ -1,4 +1,5 @@
 class Replicator
+  require "pry"
 
   attr_reader :plate
 
@@ -64,6 +65,7 @@ class Replicator
       elsif glass_in_reactor_core.temperature < desired_temperature
         @enterprise.reactor.heat_items_in_core
       end
+      binding.pry
 
       number_of_adjustments += 1
 
